@@ -1,0 +1,22 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo Szczawik is here!",
+    "start": "start https://127.0.0.1 & nodemon server.js"
+  },
+  "author": "Szczawik",
+  "license": "ISC",
+  "description": "default server",
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "helmet": "^8.0.0",
+    "mysql2": "^3.11.5",
+    "nodemon": "^3.1.7"
+  }
+}
