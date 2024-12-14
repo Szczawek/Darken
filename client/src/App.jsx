@@ -1,9 +1,13 @@
+import "./styles.css";
 import { lazy, useEffect, Suspense } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 const Home = lazy(() => import("./roots/Home"));
 const NotFound = lazy(() => import("./roots/NotFound"));
 const ErrorComponent = lazy(() => import("./roots/ErrorComponent"));
 const WatchWindow = lazy(() => import("./home/WatchWindow"));
+const Navigation = lazy(() => import("./roots/Navigation"));
+const SearchForVideo = lazy(() => import("./roots/SearchForVideo"));
+
 export default function App() {
   useEffect(() => {
     async function isServerWorking() {
@@ -24,10 +28,12 @@ export default function App() {
     <div className="app">
       <Suspense fallback={<p className="loadig-route">Loading ...</p>}>
         <BrowserRouter>
+          <Navigation />
           <Routes>
             <Route>
               <Route index element={<Home />} />
-              <Route path="*" element={<WatchWindow />} />
+              <Route path="/video" element={<SearchForVideo />} />
+              <Route path="*" element={<NotFound />} />
             </Route>
           </Routes>
         </BrowserRouter>
