@@ -6,6 +6,16 @@
   box-sizing: border-box;
 }
 
+:root {
+  --std-rd: 0.2rem;
+  --confirm-color:rgb(43, 171, 43);
+  --cancel-color:red;
+  --big-fs:2rem;
+  --medium-fs:1.4rem;
+  --small-fs:0.8rem;
+  --component-pdg: 1rem 2rem;
+}
+
 html {
   color-scheme: light dark;
 }
@@ -42,6 +52,7 @@ h6 {
 }
 
 input {
+  display: block;
   width: "inherit";
 }
 

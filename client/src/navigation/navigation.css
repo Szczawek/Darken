@@ -1,0 +1,11 @@
+.navigation {
+  display: grid;
+  align-items: center;
+  justify-content: space-between;
+  grid-template-columns: repeat(3, max-content);
+}
+
+.navigation .search-lb {
+  padding: var(--component-pdg);
+  border: 2px solid red;
+}

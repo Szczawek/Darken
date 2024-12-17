@@ -1,15 +1,16 @@
 import { Outlet, Link } from "react-router-dom";
+import "../navigation/navigation.css"
 import AccountPanel from "../navigation/AccountPanel";
 export default function Navigation() {
   return (
     <>
       <header className="navigation-bar">
-        <nav>
+        <nav className="navigation">
           <Link to="/">
-            <h2>Logo</h2>
+            <h2 className="logo">Logo</h2>
           </Link>
           <label htmlFor="find-by-name-inp" className="search-lb">
-            <input type="search" id="find-by-name-inp" />
+            <input placeholder="Find your video..." type="search" id="find-by-name-inp" />
           </label>
           <AccountPanel />
         </nav>
@@ -17,4 +18,4 @@ export default function Navigation() {
       <Outlet />
     </>
   );
-}
+} 

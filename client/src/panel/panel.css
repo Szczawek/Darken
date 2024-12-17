@@ -1,0 +1,33 @@
+.upload-video {
+  padding-block: 2rem;
+}
+
+.upload-video .sub-title {
+  font-size: var(--medium-fs);
+}
+.upload-video form {
+  display: grid;
+  text-align: center;
+  place-content: center;
+  row-gap: 2rem;
+}
+
+.choose-video {
+  background-color: rgba(226, 226, 21, 0.129);
+  padding: 1rem 2rem;
+}
+
+.upload-btn {
+  background-color: var(--confirm-color);
+  padding: 1rem 2rem;
+  font-size: var(--medium-fs);
+  width: max-content;
+  border-radius: var(--std-rd);
+  margin-inline: auto;
+  transition: filter, background-color, 300ms ease-in;
+}
+
+.upload-btn:is(:hover, :focus) {
+  filter: brightness(50%);
+  background-color: var(--cancel-color);
+}

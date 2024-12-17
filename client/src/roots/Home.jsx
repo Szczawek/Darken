@@ -5,12 +5,14 @@ export default function Home() {
   const [videos, loading, error] = useVideoLoader();
 
   if (error)
-    return (
+    return (  
       <div className="error-shelf">
         <p>Error with server</p>
       </div>
     );
-  return (
+
+  if(videos && !loading) return <div className="desc"><p>There are currently no videos on the platform. Do you want to be the first?</p></div>  
+  return (  
     <div className="video-shelf">
       {loading ? (
         <p className="loading">Loading ...</p>
