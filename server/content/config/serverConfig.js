@@ -11,7 +11,7 @@ const corsOptions = {
   credentials: true,
   methods: ["GET", "POST", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"],
-  origin: ["https://127.0.0.1:5173"],
+  origin: ["https://127.0.0.1:5173","https://127.0.0.1"],
 };
 app.use(express.json());
 app.use(cors(corsOptions));

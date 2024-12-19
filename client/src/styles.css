@@ -8,11 +8,11 @@
 
 :root {
   --std-rd: 0.2rem;
-  --confirm-color:rgb(43, 171, 43);
-  --cancel-color:red;
-  --big-fs:2rem;
-  --medium-fs:1.4rem;
-  --small-fs:0.8rem;
+  --confirm-color: rgb(43, 171, 43);
+  --cancel-color: red;
+  --big-fs: 2rem;
+  --medium-fs: 1.4rem;
+  --small-fs: 0.8rem;
   --component-pdg: 1rem 2rem;
 }
 
@@ -61,6 +61,9 @@ video,
 iframe {
   max-width: 100%;
 }
-body {
+
+.app {
   min-height: 100vh;
+  display: grid;
+  grid-template-rows: 6rem 1fr;
 }

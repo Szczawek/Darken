@@ -1,4 +1,5 @@
 .navigation {
+padding-inline: 2rem;
   display: grid;
   align-items: center;
   justify-content: space-between;
@@ -12,4 +13,12 @@
 
 .logo {
   max-width: 10rem;
+}
+.user-logo {
+  max-width: 4rem;
+}
+.user-logo img {
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
 }
