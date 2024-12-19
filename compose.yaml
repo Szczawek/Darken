@@ -1,0 +1,17 @@
+services:
+
+  client:
+    build: client
+    container_name: client
+    env_file:
+      - client/.env
+    ports:
+      - 8443:8443
+
+  server:
+    build: server
+    container_name: server
+    env_file:
+      - server/.env
+    ports:
+      - 443:443

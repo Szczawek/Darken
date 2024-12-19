@@ -7,7 +7,7 @@ export default function Navigation() {
       <header className="navigation-bar">
         <nav className="navigation">
           <Link to="/">
-            <h2 className="logo">Logo</h2>
+            <img className="logo" src="/images/Darken.png" alt="logo" />
           </Link>
           <label htmlFor="find-by-name-inp" className="search-lb">
             <input placeholder="Find your video..." type="search" id="find-by-name-inp" />

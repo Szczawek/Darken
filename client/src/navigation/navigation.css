@@ -9,3 +9,7 @@
   padding: var(--component-pdg);
   border: 2px solid red;
 }
+
+.logo {
+  max-width: 10rem;
+}

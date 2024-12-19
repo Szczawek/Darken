@@ -86,4 +86,6 @@ node_modules/
 
 # dotenv environment variables file
 *.env
+*.env.produciton
+*.env.prod
 *.mp4
