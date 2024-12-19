@@ -6,6 +6,7 @@ const NotFound = lazy(() => import("./roots/NotFound"));
 const Navigation = lazy(() => import("./roots/Navigation"));
 const SearchForVideo = lazy(() => import("./roots/SearchForVideo"));
 const UserPanel = lazy(() => import("./roots/UserPanel"));
+const AccountForm = lazy(() => import("./roots/AccountForm"));
 
 export default function App() {
   useEffect(() => {
@@ -31,6 +32,7 @@ export default function App() {
           <Routes>
             <Route>
               <Route index element={<Home />} />
+              <Route path="/account/*" element={<AccountForm />} />
               <Route path="/user-panel" element={<UserPanel />} />
               <Route path="/video" element={<SearchForVideo />} />
               <Route path="*" element={<NotFound />} />
