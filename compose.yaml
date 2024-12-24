@@ -1,8 +1,7 @@
 services:
-
   client:
     build: client
-    container_name: client
+    container_name: client-dr
     env_file:
       - client/.env
     ports:
@@ -14,7 +13,7 @@ services:
     build:
        context: server/nginx/
        dockerfile: Dockerfile
-    container_name: server
+    container_name: server-dr
     env_file:
       - server/.env
     ports:
@@ -29,24 +28,24 @@ services:
     build: 
       context: server
       dockerfile: Dockerfile
-    container_name: express
-
+    container_name: express-dr
     env_file:
     - server/.env
     ports:
-      - 3000:3000
+      - 3000:443
     networks:
       - backend-network
+    depends_on:
+      - db-main
 
   db-main: 
     image: mysql:latest  
     ports:
       - 3307:3306
     environment:
-      - MYSQL_DATABASE="darken"
-      - MYSQL_HOST="root"
-      - MYSQL_ROOT_PASSWORD="636mAMnAhymLQos/GjIhe+6uRHm5TK68uP4FPLIP4Yo"
-    container_name: mysql
+      MYSQL_DATABASE: darken
+      MYSQL_ROOT_PASSWORD: 636mAMnAhymLQos/GjIhe+6uRHm5TK68uP4FPLIP4Yo
+    container_name: mysql-dr
     networks:
       - backend-network
     restart: always

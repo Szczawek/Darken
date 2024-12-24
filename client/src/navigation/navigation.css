@@ -3,7 +3,7 @@ padding-inline: 2rem;
   display: grid;
   align-items: center;
   justify-content: space-between;
-  grid-template-columns: repeat(3, max-content);
+  grid-template-columns: repeat(2, max-content) 5rem;
 }
 
 .navigation .search-lb {
@@ -14,11 +14,23 @@ padding-inline: 2rem;
 .logo {
   max-width: 10rem;
 }
-.user-logo {
+.user-logo, .avatar-link {
   max-width: 4rem;
 }
-.user-logo img {
+.user-logo img, .avatar-link img {
   border-radius: 50%;
   aspect-ratio: 1/1;
   object-fit: cover;
+}
+
+/* PANEL LIST */
+
+.panel-list {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: grid;
+  place-content: center;
+  width: 10rem;
+  backdrop-filter: blur(20rem);
 }

@@ -2,8 +2,8 @@ import { createConnection } from "mysql2";
 
 const db = createConnection({
   user: "root",
-  host: "127.0.0.1",
-  password: "9goFK18O7XNFZI",
+  host: "mysql-dr",
+  password: "636mAMnAhymLQos/GjIhe+6uRHm5TK68uP4FPLIP4Yo",
   database: "darken",
   port: 3306,
 });
